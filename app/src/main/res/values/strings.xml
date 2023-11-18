@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LogpassExample</string>
+    <string name="autorization">Авторизация</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="enter">Авторизоваться</string>
+    <string name="enter_pass">Введите пароль</string>
+    <string name="hint_login">Введите логин</string>
+</resources>

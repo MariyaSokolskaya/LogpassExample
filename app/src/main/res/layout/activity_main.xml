@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/moon">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/autorization"
+        android:textSize="32sp"
+        android:textColor="#EDF8E2"
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textSize="28sp"
+        android:textColor="#EDF8E2"
+        android:padding="10sp"
+        android:layout_marginBottom="10dp"
+        android:labelFor="@id/login"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textColor="#EDF8E2"
+        android:padding="10sp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/login"
+        android:autofillHints="@string/enter_pass"
+        android:inputType="text"
+        android:hint="@string/hint_login"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:textSize="28sp"
+        android:textColor="#EDF8E2"
+        android:padding="10sp"
+        android:layout_marginBottom="10dp"
+        android:labelFor="@id/password"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textColor="#EDF8E2"
+        android:padding="10sp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/password"
+        android:inputType="textPassword"
+        android:hint="@string/enter_pass"
+        android:autofillHints="@string/enter_pass" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter"
+        android:textSize="28sp"
+        android:textColor="#EDF8E2"
+        android:padding="10sp"
+        android:layout_margin="10dp"
+        android:id="@+id/enter_button"
+        android:background="#0757A8"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textColor="#EDF8E2"
+        android:padding="10sp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/res_enter"/>
+</LinearLayout>
