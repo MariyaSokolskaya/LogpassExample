@@ -1,14 +1,19 @@
 package com.example.logpassexample;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText loginText, passwordText;
@@ -45,5 +50,25 @@ public class MainActivity extends AppCompatActivity {
                 passwordText.setText("");
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        //Вариант 1
+        menu.findItem(R.id.about).setIntent(new Intent(MainActivity.this, AboutActivity.class));
+
+        return true;
+    }
+    //Вариант 2 - использование функции
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+        startActivity(item.getIntent());
+        if (item.getItemId() == R.id.exit){
+            finish();
+        }
+        return true;
     }
 }

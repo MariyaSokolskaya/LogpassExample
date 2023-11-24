@@ -6,4 +6,9 @@
     <string name="enter">Авторизоваться</string>
     <string name="enter_pass">Введите пароль</string>
     <string name="hint_login">Введите логин</string>
+    <string name="splash_name">Заставка</string>
+    <string name="splash">Заставка...</string>
+    <string name="logo">Логотип</string>
+    <string name="about_item">О программе</string>
+    <string name="exit_item">Выход</string>
 </resources>
