@@ -11,4 +11,6 @@
     <string name="logo">Логотип</string>
     <string name="about_item">О программе</string>
     <string name="exit_item">Выход</string>
+    <string name="pers_name">Имя персонажа</string>
+    <string name="write_name">Записать имя</string>
 </resources>

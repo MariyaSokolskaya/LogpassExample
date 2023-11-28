@@ -1,6 +1,7 @@
 package com.example.logpassexample;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -48,8 +49,24 @@ public class MainActivity extends AppCompatActivity {
                 resultText.setText(res);
                 loginText.setText("");
                 passwordText.setText("");
+                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                intent.putExtra("color", login);
+                //startActivity(intent);
+                startActivityForResult(intent, 0);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            String res = data.getStringExtra("name");
+            if (res == null)
+                res = "";
+            res = "\n" + res;
+            resultText.append(res);
+        }
     }
 
     @Override
@@ -71,4 +88,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
+
+
 }
